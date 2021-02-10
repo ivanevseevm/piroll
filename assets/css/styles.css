@@ -155,9 +155,22 @@ header {
     }
 
     .works__element {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        position: relative;
+    }
+
+    .works__element-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .works__element-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .works__enlarge {
@@ -167,6 +180,8 @@ header {
         display: flex;
         opacity: 0%;
         transition: opacity .35s ease;
+        position: relative;
+        z-index: 1;
     }
     .works__enlarge:hover {
         opacity: 85%;
